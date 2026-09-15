@@ -96,102 +96,63 @@ main {
   margin-bottom: 14px;
 }
 
-.diag-picker {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.diag-btn {
-  background: #fff;
-  border: 1px solid #D1D5DB;
-  border-radius: 10px;
-  padding: 16px 10px;
-  font-size: 13.5px;
-  color: #1F2937;
-  cursor: pointer;
-  text-align: center;
-  font-family: inherit;
-  line-height: 1.5;
-}
-
-.diag-btn:hover {
-  border-color: #2563EB;
-  color: #2563EB;
-  background: #EFF6FF;
-}
-
-.diag-flow {
-  display: none;
-  background: #fff;
-  border: 1px solid #E5E7EB;
-  border-radius: 10px;
-  padding: 18px 16px;
-  margin-top: 4px;
-}
-
-.diag-flow.active { display: block; }
-
-.diag-back {
-  background: none;
-  border: none;
-  color: #9CA3AF;
-  font-size: 13px;
-  padding: 0 0 14px;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.diag-question {
-  font-size: 15px;
-  font-weight: 700;
-  color: #1F2937;
-  margin: 0 0 14px;
-}
-
-.diag-options {
+.hint-search-row {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
-.diag-opt-btn {
-  background: #F9FAFB;
+.hint-search-input {
+  flex: 1;
   border: 1px solid #D1D5DB;
   border-radius: 8px;
   padding: 12px 14px;
   font-size: 14px;
-  color: #374151;
-  text-align: left;
-  cursor: pointer;
   font-family: inherit;
+  outline: none;
 }
 
-.diag-opt-btn:hover {
+.hint-search-input:focus {
   border-color: #2563EB;
-  background: #EFF6FF;
 }
 
-.diag-hint {
-  display: none;
+.hint-search-btn {
+  background: #2563EB;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 48px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hint-card {
   background: #EFF6FF;
   border: 1px solid #BFDBFE;
-  color: #1E40AF;
-  font-size: 14px;
-  padding: 14px 16px;
   border-radius: 8px;
-  margin-top: 4px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.hint-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E40AF;
+  margin: 0 0 6px;
+}
+
+.hint-card-text {
+  font-size: 14px;
+  color: #1E3A8A;
+  margin: 0;
   line-height: 1.8;
 }
 
-.diag-hint.active { display: block; }
-
-.diag-hint-label {
-  font-size: 11px;
-  letter-spacing: 1px;
-  color: #60A5FA;
-  margin: 0 0 6px;
-  font-weight: 700;
+.no-result {
+  font-size: 14px;
+  color: #9CA3AF;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .dm-note {
