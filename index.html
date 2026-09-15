@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>卡關怎麼辦</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>卡關怎麼辦？</h1>
+  <p>這裡不會直接給答案，只會幫你找到卡住的地方</p>
+</header>
+
+<main>
+
+  <div class="section-block">
+    <p class="section-title"><span class="num-badge">一</span>先自己檢查這幾件事</p>
+    <div class="checklist">
+      <div class="checklist-item"><span class="checklist-num">①</span>查看信箱，看看有沒有未讀郵件、有沒有可以回覆的信</div>
+      <div class="checklist-item"><span class="checklist-num">②</span>換幾個不同的關鍵字搜尋看看</div>
+      <div class="checklist-item"><span class="checklist-num">③</span>想一想有沒有哪些事件、地點或人名，可能可以在案件查詢系統裡查得到</div>
+      <div class="checklist-item"><span class="checklist-num">④</span>回頭看看已經看過的網站，有沒有漏掉的角落或連結</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <p class="section-title"><span class="num-badge">二</span>階段性提示</p>
+
+    <p class="diag-intro" id="diagIntro">
+      如果上面四件事都做過還是卡住，從下面選一個你目前卡住的地方，
+      回答一兩個小問題，會給你對應的提示——但不會直接寫出答案。
+    </p>
+
+    <div class="diag-picker" id="diagPicker">
+      <button class="diag-btn" data-flow="flow1">① 劉育豪的<br>安全問題</button>
+      <button class="diag-btn" data-flow="flow2">② 收不到<br>劉育豪的信</button>
+      <button class="diag-btn" data-flow="flow3">③ 前妻的<br>三個問題</button>
+      <button class="diag-btn" data-flow="flow4">④ 署級系統<br>的入口</button>
+    </div>
+
+    <!-- ===== 流程① 劉育豪的安全問題 ===== -->
+    <div class="diag-flow" id="flow1">
+      <button class="diag-back">← 換一個卡點</button>
+
+      <div class="diag-step1">
+        <p class="diag-question">有找到「忘記密碼」的入口嗎？</p>
+        <div class="diag-options">
+          <button class="diag-opt-btn" data-hint="h1-a">沒有找到</button>
+          <button class="diag-opt-btn" data-hide="f1-step1" data-next="f1-step2">找到了，但卡在後面</button>
+        </div>
+      </div>
+
+      <div class="diag-hint" id="h1-a">
+        <p class="diag-hint-label">提示</p>
+        <p>在CMS7的登入頁面上找找看，通常會在登入按鈕附近。</p>
+      </div>
+
+      <div class="diag-substep" id="f1-step2" style="display:none; margin-top:16px;">
+        <p class="diag-question">是卡在不知道選哪個安全問題，還是選了問題但答案想不出來？</p>
+        <div class="diag-options">
+          <button class="diag-opt-btn" data-hint="h1-b">不知道要選哪個問題</button>
+          <button class="diag-opt-btn" data-hint="h1-c">知道要選哪個，但答案想不出來</button>
+        </div>
+      </div>
+
+      <div class="diag-hint" id="h1-b">
+        <p class="diag-hint-label">提示</p>
+        <p>三個問題裡，只有一個問題的答案是你有機會在遊戲裡查證到的具體資訊，其他兩個目前沒有線索可查，選那個查得到答案的就對了。</p>
+      </div>
+
+      <div class="diag-hint" id="h1-c">
+        <p class="diag-hint-label">提示</p>
+        <p>答案跟一個孩子的生日有關。你需要找到兩篇不同的資訊：一篇會透露月份跟日期，另一篇會透露這個孩子在某個特定時間點的年紀，兩者合在一起才推得出完整的出生年月日。</p>
+      </div>
+    </div>
+
+    <!-- ===== 流程② 收不到劉育豪的信 ===== -->
+    <div class="diag-flow" id="flow2">
+      <button class="diag-back">← 換一個卡點</button>
+
+      <div class="diag-step1">
+        <p class="diag-question">你是不是還沒有調查過工廠相關的事件？</p>
+        <div class="diag-options">
+          <button class="diag-opt-btn" data-hint="h2-a">對，還沒查過工廠的事</button>
+          <button class="diag-opt-btn" data-hint="h2-b">有查過，但信還是沒出現</button>
+        </div>
+      </div>
+
+      <div class="diag-hint" id="h2-a">
+        <p class="diag-hint-label">提示</p>
+        <p>有個地名一直在案件周邊反覆出現，試著在搜尋系統裡搜看看那個工廠的名字，或是去案件查詢系統找找看跟它有關的代碼。</p>
+      </div>
+
+      <div class="diag-hint" id="h2-b">
+        <p class="diag-hint-label">提示</p>
+        <p>光是搜到工廠的新聞還不夠。往前想想那封坦白信裡有兩個可以點的連結，加上跟工廠有關的案件代碼，總共需要湊齊好幾個地方都查過，信才會出現。</p>
+      </div>
+    </div>
+
+    <!-- ===== 流程③ 前妻的三個問題 ===== -->
+    <div class="diag-flow" id="flow3">
+      <button class="diag-back">← 換一個卡點</button>
+
+      <div class="diag-step1">
+        <p class="diag-question">傳訊息完全沒有回應，還是有回應但卡在某一題？</p>
+        <div class="diag-options">
+          <button class="diag-opt-btn" data-hint="h3-a">完全沒有回應</button>
+          <button class="diag-opt-btn" data-hide="f3-step1" data-next="f3-step2">有回應，卡在某一題</button>
+        </div>
+      </div>
+
+      <div class="diag-hint" id="h3-a">
+        <p class="diag-hint-label">提示</p>
+        <p>這個對話要先滿足兩個條件才會理你：一個跟你在某封信裡選擇的回覆方式有關，另一個跟你有沒有拿到更高的系統權限有關。兩個都要達成才會有回應。</p>
+      </div>
+
+      <div class="diag-substep" id="f3-step2" style="display:none; margin-top:16px;">
+        <p class="diag-question">卡在第幾題？</p>
+        <div class="diag-options">
+          <button class="diag-opt-btn" data-hint="h3-b">第一題（車牌號碼）</button>
+          <button class="diag-opt-btn" data-hint="h3-c">第二題（同車的人是誰）</button>
+          <button class="diag-opt-btn" data-hint="h3-d">第三題（那個人的身分）</button>
+        </div>
+      </div>
+
+      <div class="diag-hint" id="h3-b">
+        <p class="diag-hint-label">提示</p>
+        <p>有個地方的照片裡藏著車牌號碼，要自己放大看清楚，答案不是用文字寫出來的。</p>
+      </div>
+
+      <div class="diag-hint" id="h3-c">
+        <p class="diag-hint-label">提示</p>
+        <p>去找找看跟這起事故的當事人有關的社群帳號，裡面有一篇貼文預設是看不到的，換一種排序方式就會跑出來。</p>
+      </div>
+
+      <div class="diag-hint" id="h3-d">
+        <p class="diag-hint-label">提示</p>
+        <p>找到名字之後，拿這個名字去搜尋看看，會找到一則相關新聞，可以確認這個人過去真正的職位。</p>
+      </div>
+    </div>
+
+    <!-- ===== 流程④ 署級系統的入口 ===== -->
+    <div class="diag-flow" id="flow4">
+      <button class="diag-back">← 換一個卡點</button>
+
+      <div class="diag-step1">
+        <p class="diag-question">是找不到入口，還是找到了但卡在登入？</p>
+        <div class="diag-options">
+          <button class="diag-opt-btn" data-hint="h4-a">找不到入口</button>
+          <button class="diag-opt-btn" data-hint="h4-b">找到了，卡在登入</button>
+        </div>
+      </div>
+
+      <div class="diag-hint" id="h4-a">
+        <p class="diag-hint-label">提示</p>
+        <p>有個帳號如果拿去一般系統登入，會顯示已經停用，訊息裡應該會提示你接下來該去哪裡。</p>
+      </div>
+
+      <div class="diag-hint" id="h4-b">
+        <p class="diag-hint-label">提示</p>
+        <p>帳號是某個特定人物的警員編號，去查查看跟人事異動有關的文件。密碼則是某次對話裡有人親口告訴過你邏輯——是對那個人來說意義重大的一個日期。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="dm-note">如果看完提示還是完全沒有頭緒，歡迎私訊製作者。</p>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
