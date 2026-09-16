@@ -22,6 +22,29 @@ function toHtml(text) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ===== 分頁切換 =====
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });
+
+  // ===== 常見問題：點開才顯示 =====
+  document.querySelectorAll(".faq-item .q-head").forEach(head => {
+    head.addEventListener("click", () => {
+      const item = head.closest(".faq-item");
+      const body = item.querySelector(".faq-body");
+      const open = body.style.display === "block";
+      body.style.display = open ? "none" : "block";
+      item.classList.toggle("open", !open);
+    });
+  });
+
+  // ===== 關鍵字搜尋 =====
   const input = document.getElementById("hintSearchInput");
   const btn = document.getElementById("hintSearchBtn");
   const results = document.getElementById("hintResults");

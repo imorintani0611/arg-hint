@@ -96,6 +96,51 @@ main {
   margin-bottom: 14px;
 }
 
+.tab-bar {
+  display: flex;
+  margin-top: 24px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #9CA3AF;
+  cursor: pointer;
+  font-family: inherit;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn.active {
+  color: #2563EB;
+  border-bottom-color: #2563EB;
+}
+
+.tab-panel {
+  display: none;
+  margin-top: 16px;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.faq-body {
+  display: none;
+}
+
+.faq-text {
+  font-size: 14px;
+  color: #374151;
+  margin: 12px 0 0;
+  line-height: 1.8;
+}
+
 .hint-search-row {
   display: flex;
   gap: 8px;

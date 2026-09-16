@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>卡關怎麼辦</title>
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -26,9 +26,12 @@
     </div>
   </div>
 
-  <div class="section-block">
-    <p class="section-title"><span class="num-badge">二</span>階段性提示</p>
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="tabHints">階段性提示</button>
+    <button class="tab-btn" data-tab="tabFaq">常見問題</button>
+  </div>
 
+  <div class="tab-panel active" id="tabHints">
     <p class="diag-intro">
       如果上面四件事都做過還是卡住，請用關鍵字搜尋相關提示。
       關鍵字類型有兩種：<br>
@@ -44,11 +47,57 @@
     <div id="hintResults"></div>
   </div>
 
+  <div class="tab-panel" id="tabFaq">
+    <p class="diag-intro">點開問題就能看到提示。</p>
+
+    <div class="q-item faq-item">
+      <button class="q-head">特定人物都不回訊息，或者情況沒有進展</button>
+      <div class="q-body faq-body">
+        <p class="faq-text">通常是調查進度還不夠。例如警界的上層有辦法監視下屬的動態，所以當9021還沒有調查到某個程度時，是不會出面的喔！</p>
+      </div>
+    </div>
+
+    <div class="q-item faq-item">
+      <button class="q-head">登入問題</button>
+      <div class="q-body faq-body">
+        <p class="faq-text">安全問題中有兩個選項比較有可能，其中一個很容易取得，但是答案是另一個選項！<br>另外警察們有習慣的日期格式，不自覺地就會照著用！</p>
+      </div>
+    </div>
+
+    <div class="q-item faq-item">
+      <button class="q-head">結局</button>
+      <div class="q-body faq-body">
+        <p class="faq-text">總共有3個結局頁面，有兩個選擇導致的結局是相同的！如果想知道真相就要繼續調查下去！</p>
+      </div>
+    </div>
+
+    <div class="q-item faq-item">
+      <button class="q-head">案件代號</button>
+      <div class="q-body faq-body">
+        <p class="faq-text">如果進度沒辦法推動，可以想想看查詢到的日期哪些算是警方有介入的「事件」、「死亡登記」、「人事異動」！</p>
+      </div>
+    </div>
+
+    <div class="q-item faq-item">
+      <button class="q-head">回覆特定信件時應使用的關鍵字</button>
+      <div class="q-body faq-body">
+        <p class="faq-text">可以想想看回覆的邏輯。最多人問的那封信，想想看「為什麼需要對方的解釋」。</p>
+      </div>
+    </div>
+
+    <div class="q-item faq-item">
+      <button class="q-head">找到特定人物的密碼了，但是被拒絕登入</button>
+      <div class="q-body faq-body">
+        <p class="faq-text">入口的顯示說的是要去另一個系統登入。在9021的聯絡人中，誰最有可能提供這個入口給他呢？翻一翻信件的角落吧。</p>
+      </div>
+    </div>
+  </div>
+
   <p class="dm-note">如果看完提示還是完全沒有頭緒，歡迎私訊製作者。</p>
 
 </main>
 
-<script src="js/hints-data.js?v=4"></script>
-<script src="js/main.js?v=4"></script>
+<script src="js/hints-data.js?v=5"></script>
+<script src="js/main.js?v=5"></script>
 </body>
 </html>
